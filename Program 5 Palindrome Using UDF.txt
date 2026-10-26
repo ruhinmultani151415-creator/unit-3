@@ -1,0 +1,31 @@
+Program 5: Palindrome Using UDF
+
+#include <stdio.h>
+
+void palindrome()
+{
+    int n, original, rem, rev = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    original = n;
+
+    while(n > 0)
+    {
+        rem = n % 10;
+        rev = rev * 10 + rem;
+        n = n / 10;
+    }
+
+    if(original == rev)
+        printf("Palindrome number");
+    else
+        printf("Not a palindrome number");
+}
+
+int main()
+{
+    palindrome();
+    return 0;
+}
