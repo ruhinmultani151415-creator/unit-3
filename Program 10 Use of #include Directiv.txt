@@ -1,0 +1,10 @@
+Program 10: Use of #include Directive
+
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello World");
+
+    return 0;
+}
