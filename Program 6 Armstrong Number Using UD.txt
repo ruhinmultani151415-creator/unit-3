@@ -1,0 +1,31 @@
+Program 6: Armstrong Number Using UDF
+
+#include <stdio.h>
+
+void armstrong()
+{
+    int n, original, rem, sum = 0;
+
+    printf("Enter a three-digit number: ");
+    scanf("%d", &n);
+
+    original = n;
+
+    while(n > 0)
+    {
+        rem = n % 10;
+        sum = sum + rem * rem * rem;
+        n = n / 10;
+    }
+
+    if(original == sum)
+        printf("Armstrong number");
+    else
+        printf("Not an Armstrong number");
+}
+
+int main()
+{
+    armstrong();
+    return 0;
+}
